@@ -1,0 +1,14 @@
+17:58:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 44] Logger initialized
+17:58:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 55] HeartbeatSender created successfully
+17:58:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:52: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:53: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:54: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:58:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender.py | run | 58] Heartbeat sent successfully
+17:59:00: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 70] Heartbeat sender worker exiting
