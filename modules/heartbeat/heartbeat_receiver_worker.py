@@ -18,13 +18,15 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    Connection = mavlink connection to listen for heartbeats
+    output_queue = queue to report connection state strings
+    controller = workercontroller used to signal it to stop
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,8 +49,27 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    result, receiver = heartbeat_receiver.HeartbeatReceiver.create(connection, local_logger)
+    if not result:
+        local_logger.error("Failed to create HeartbeatReceiver, exiting worker", True)
+        return
+    
+    # Get Pylance to stop complaining
+    assert receiver is not None
+
+    local_logger.info("HeartbeatReceiver created successfully", True)
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        result = receiver.run()
+        if not result:
+            local_logger.error("HeartbeatReceiver.run() failed unexpectedly", True)
+            continue
+    
+        output_queue.queue.put("Connected" if receiver.is_connected else "Disconnected")
+    
+    local_logger.info("Heartbeat receiver worker exiting")
 
 
 # =================================================================================================
