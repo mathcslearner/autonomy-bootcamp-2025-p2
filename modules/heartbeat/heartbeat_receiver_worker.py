@@ -53,7 +53,7 @@ def heartbeat_receiver_worker(
     if not result:
         local_logger.error("Failed to create HeartbeatReceiver, exiting worker", True)
         return
-    
+
     # Get Pylance to stop complaining
     assert receiver is not None
 
@@ -66,9 +66,9 @@ def heartbeat_receiver_worker(
         if not result:
             local_logger.error("HeartbeatReceiver.run() failed unexpectedly", True)
             continue
-    
+
         output_queue.queue.put("Connected" if receiver.is_connected else "Disconnected")
-    
+
     local_logger.info("Heartbeat receiver worker exiting")
 
 

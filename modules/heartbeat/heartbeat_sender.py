@@ -56,10 +56,10 @@ class HeartbeatSender:
                 mavutil.mavlink.MAV_TYPE_GCS, mavutil.mavlink.MAV_AUTOPILOT_INVALID, 0, 0, 0
             )
             self.logger.info("Heartbeat sent successfully", True)
-        except Exception as e:
+        except (OSError, TypeError, AttributeError) as e:
             self.logger.error(f"Failed to send heartbeat: {e}", True)
             return False
-        
+
         return True
 
 

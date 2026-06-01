@@ -54,7 +54,7 @@ def telemetry_worker(
     if not result:
         local_logger.error("Failed to create Telemetry instance")
         return
-    
+
     assert telemetry_instance is not None
 
     # Main loop: do work.
@@ -62,7 +62,9 @@ def telemetry_worker(
         controller.check_pause()
         result, telemetry_data = telemetry_instance.run()
         if not result:
-            local_logger.warning("Telemetry run() failed (timeout or bad message), retrying...", True)
+            local_logger.warning(
+                "Telemetry run() failed (timeout or bad message), retrying...", True
+            )
             continue
 
         output_queue.queue.put(telemetry_data)

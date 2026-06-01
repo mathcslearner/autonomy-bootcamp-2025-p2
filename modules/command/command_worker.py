@@ -57,13 +57,13 @@ def command_worker(
     if not result:
         local_logger.error("Failed to create Command instance", True)
         return
-    
+
     assert command_instance is not None
 
     # Main loop: do work.
     while not controller.is_exit_requested():
         controller.check_pause()
-        
+
         if input_queue.queue.empty():
             continue
 

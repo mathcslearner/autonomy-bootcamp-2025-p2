@@ -30,7 +30,7 @@ class HeartbeatReceiver:
         if connection is None:
             local_logger.error("Connection is None, cannot create HeartbeatReceiver")
             return False, None
-        
+
         return True, HeartbeatReceiver(cls.__private_key, connection, local_logger)
 
     def __init__(
@@ -59,13 +59,11 @@ class HeartbeatReceiver:
         the connection is considered disconnected.
         """
         try:
-            message = self.connection.recv_match(
-                type="HEARTBEAT", blocking=True, timeout=1.0
-            )
-        except Exception as e:
+            message = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.0)
+        except (OSError, TypeError, AttributeError) as e:
             self.logger.error(f"Unexpected error while receiving heartbeat: {e}", True)
             return False
-    
+
         if message is None:
             # No heartbeat received within the timeout window
             self.missed_count += 1
@@ -73,12 +71,12 @@ class HeartbeatReceiver:
 
             if self.missed_count >= 5:
                 self.is_connected = False
-        
+
         else:
             # Successfully received a heartbeat
             self.missed_count = 0
             self.is_connected = True
-            
+
         return True
 
 

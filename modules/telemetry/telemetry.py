@@ -84,8 +84,8 @@ class Telemetry:
         # Create a Telemetry object
         try:
             return True, Telemetry(cls.__private_key, connection, local_logger)
-        
-        except Exception as e:
+
+        except (OSError, TypeError, AttributeError) as e:
             local_logger.error(f"Failed to create Telemetry object: {e}", True)
             return False, None
 
@@ -128,9 +128,11 @@ class Telemetry:
                 attitude = msg
             if attitude and local_position:
                 break
-        
+
         if attitude and local_position:
-            return_telemetry.time_since_boot = max(local_position.time_boot_ms, attitude.time_boot_ms)
+            return_telemetry.time_since_boot = max(
+                local_position.time_boot_ms, attitude.time_boot_ms
+            )
             return_telemetry.roll = attitude.roll
             return_telemetry.pitch = attitude.pitch
             return_telemetry.yaw = attitude.yaw
@@ -144,10 +146,9 @@ class Telemetry:
             return_telemetry.y_velocity = local_position.vy
             return_telemetry.z_velocity = local_position.vz
             return True, return_telemetry
-        
-        else:
-            self.logger.warning("Missing local_position_NED or attitude, restart")
-            return False, None
+
+        self.logger.warning("Missing local_position_NED or attitude, restart")
+        return False, None
 
 
 # =================================================================================================

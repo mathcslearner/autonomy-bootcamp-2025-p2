@@ -45,7 +45,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         #  Create a Command object
         try:
             return True, Command(cls.__private_key, connection, target, local_logger)
-        except Exception as e:
+        except (OSError, TypeError, AttributeError) as e:
             local_logger.error(f"Failed to create Command object: {e}", True)
             return False, None
 
@@ -68,17 +68,14 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self.vz_sum = 0.0
         self.sample_count = 0
 
-    def run(
-        self,
-        telemetry_data: telemetry.TelemetryData
-    ) -> "tuple[bool, str | None]":
+    def run(self, telemetry_data: telemetry.TelemetryData) -> "tuple[bool, str | None]":
         """
         Make a decision based on received telemetry data.
         """
         if telemetry_data is None:
             self.local_logger.error("Received None telemetry data")
             return False, None
-        
+
         # Log average velocity for this trip so far
         self.vx_sum += telemetry_data.x_velocity
         self.vy_sum += telemetry_data.y_velocity
@@ -134,7 +131,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
             delta_deg -= 360
         while delta_deg < -180:
             delta_deg += 360
-        
+
         if abs(delta_deg) > 5.0:
             self.connection.mav.command_long_send(
                 1,

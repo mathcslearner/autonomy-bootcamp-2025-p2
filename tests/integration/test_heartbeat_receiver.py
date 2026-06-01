@@ -51,7 +51,7 @@ def start_drone() -> None:
 # =================================================================================================
 def stop(
     controller: worker_controller.WorkerController,
-    output_queue: queue_proxy_wrapper.QueueProxyWrapper
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Stop the workers.
@@ -146,11 +146,7 @@ def main() -> int:
     # Read the main queue (worker outputs)
     threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
 
-    heartbeat_receiver_worker.heartbeat_receiver_worker(
-       connection,
-       output_queue,
-       controller
-    )
+    heartbeat_receiver_worker.heartbeat_receiver_worker(connection, output_queue, controller)
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
     # =============================================================================================
