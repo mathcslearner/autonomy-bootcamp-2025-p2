@@ -77,7 +77,7 @@ def read_queue(
                 break
 
             main_logger.info(f"Drone state: {state}", True)
-        except Exception as e:
+        except (OSError, TypeError, AttributeError) as e:
             main_logger.error(f"Exception: {e}", True)
             continue
 
