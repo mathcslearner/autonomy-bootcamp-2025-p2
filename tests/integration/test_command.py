@@ -7,6 +7,7 @@ import multiprocessing as mp
 import subprocess
 import threading
 import time
+import queue as py_queue
 
 from pymavlink import mavutil
 
@@ -77,16 +78,19 @@ def read_queue(
     """
     # Add logic to read from your worker's output queue and print it using the logger
     while not controller.is_exit_requested():
-        if output_queue.queue.empty():
+        try:
+            output = output_queue.queue.get(timeout=0.1)
+        except py_queue.Empty:
             continue
-        output = output_queue.queue.get()
+        if output is None:
+            break
         main_logger.info(f"Command output: {output}", True)
 
 
 def put_queue(
     input_queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,
-    path: "list[telemetry.TelemetryData]",
+    path: list[telemetry.TelemetryData],
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.

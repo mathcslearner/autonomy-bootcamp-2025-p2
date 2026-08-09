@@ -54,7 +54,7 @@ class HeartbeatReceiver:
         self,
     ) -> bool:
         """
-        Attempt to recieve a heartbeat message.
+        Attempt to receive a heartbeat message.
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
@@ -76,6 +76,7 @@ class HeartbeatReceiver:
             # Successfully received a heartbeat
             self.missed_count = 0
             self.is_connected = True
+            self.logger.info("Heartbeat received", True)
 
         return True
 

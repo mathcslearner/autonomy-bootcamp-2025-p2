@@ -1,6 +1,5 @@
-23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | main | 120] Connected!
-23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 48] Logger initialized
+23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -15,7 +14,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 333,
             x: 0.0,
             y: 0.0,
@@ -30,7 +29,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:47: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 500,
             x: 0.5,
             y: 0.0,
@@ -45,7 +44,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 666,
             x: 0.5,
             y: 0.0,
@@ -60,7 +59,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1000,
             x: 0.5,
             y: 0.0,
@@ -75,7 +74,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1000,
             x: 1.0,
             y: 0.0,
@@ -90,7 +89,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1333,
             x: 1.0,
             y: 0.0,
@@ -105,7 +104,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:48: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1500,
             x: 1.5,
             y: 0.0,
@@ -120,7 +119,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1666,
             x: 1.5,
             y: 0.0,
@@ -135,7 +134,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2000,
             x: 1.5,
             y: 0.0,
@@ -150,7 +149,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2000,
             x: 2.0,
             y: 0.0,
@@ -165,7 +164,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2333,
             x: 2.0,
             y: 0.0,
@@ -180,7 +179,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2500,
             x: 2.5,
             y: 0.0,
@@ -195,7 +194,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2666,
             x: 2.5,
             y: 0.0,
@@ -210,7 +209,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3000,
             x: 2.5,
             y: 0.0,
@@ -225,7 +224,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3000,
             x: 3.0,
             y: 0.0,
@@ -240,7 +239,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3333,
             x: 3.0,
             y: 0.0,
@@ -255,7 +254,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:50: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3500,
             x: 3.5,
             y: 0.0,
@@ -270,7 +269,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3666,
             x: 3.5,
             y: 0.0,
@@ -285,7 +284,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4000,
             x: 3.5,
             y: 0.0,
@@ -300,7 +299,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4000,
             x: 4.0,
             y: 0.0,
@@ -315,7 +314,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4333,
             x: 4.0,
             y: 0.0,
@@ -330,7 +329,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:51: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4500,
             x: 4.5,
             y: 0.0,
@@ -345,7 +344,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:52: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:52: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4666,
             x: 4.5,
             y: 0.0,
@@ -360,7 +359,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:53: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:53: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4666,
             x: 4.5,
             y: 0.0,
@@ -375,7 +374,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:53: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:53: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4500,
             x: 4.5,
             y: 0.0,
@@ -390,7 +389,7 @@
             pitch_speed: 555.0,
             yaw_speed: 555.0
         }
-23:00:54: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:54: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4500,
             x: 4.5,
             y: 0.0,
@@ -405,7 +404,7 @@
             pitch_speed: 555.0,
             yaw_speed: 555.0
         }
-23:00:54: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:54: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 999,
             x: 3.0,
             y: 2.0,
@@ -420,7 +419,7 @@
             pitch_speed: 555.0,
             yaw_speed: 555.0
         }
-23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 999,
             x: 3.0,
             y: 2.0,
@@ -435,7 +434,7 @@
             pitch_speed: 555.0,
             yaw_speed: 555.0
         }
-23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 111,
             x: 3.0,
             y: 2.0,
@@ -450,7 +449,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -465,7 +464,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 333,
             x: 0.3333333432674408,
             y: 0.0,
@@ -480,7 +479,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:55: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 500,
             x: 0.3333333432674408,
             y: 0.0,
@@ -495,7 +494,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 666,
             x: 0.6666666865348816,
             y: 0.0,
@@ -510,7 +509,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1000,
             x: 0.6666666865348816,
             y: 0.0,
@@ -525,7 +524,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1000,
             x: 1.0,
             y: 0.0,
@@ -540,7 +539,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1333,
             x: 1.3333333730697632,
             y: 0.0,
@@ -555,7 +554,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:56: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1500,
             x: 1.3333333730697632,
             y: 0.0,
@@ -570,7 +569,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 1666,
             x: 1.6666666269302368,
             y: 0.0,
@@ -585,7 +584,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2000,
             x: 1.6666666269302368,
             y: 0.0,
@@ -600,7 +599,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2000,
             x: 2.0,
             y: 0.0,
@@ -615,7 +614,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2333,
             x: 2.3333332538604736,
             y: 0.0,
@@ -630,7 +629,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:57: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2500,
             x: 2.3333332538604736,
             y: 0.0,
@@ -645,7 +644,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 2666,
             x: 2.6666667461395264,
             y: 0.0,
@@ -660,7 +659,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3000,
             x: 2.6666667461395264,
             y: 0.0,
@@ -675,7 +674,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3000,
             x: 3.0,
             y: 0.0,
@@ -690,7 +689,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3333,
             x: 3.3333332538604736,
             y: 0.0,
@@ -705,7 +704,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:58: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3500,
             x: 3.3333332538604736,
             y: 0.0,
@@ -720,7 +719,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 3666,
             x: 3.6666667461395264,
             y: 0.0,
@@ -735,7 +734,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4000,
             x: 3.6666667461395264,
             y: 0.0,
@@ -750,7 +749,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4000,
             x: 4.0,
             y: 0.0,
@@ -765,7 +764,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4333,
             x: 4.333333492279053,
             y: 0.0,
@@ -780,7 +779,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:00:59: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4500,
             x: 4.333333492279053,
             y: 0.0,
@@ -795,7 +794,22 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-23:01:00: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 79] Received telemetry: {
+23:01:00: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
+            time_since_boot: 4666,
+            x: 4.666666507720947,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: 1.0,
+            y_velocity: 0.0,
+            z_velocity: 0.0,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 1.5707963705062866,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+23:01:01: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 77] Telemetry data enqueued: {
             time_since_boot: 4666,
             x: 4.666666507720947,
             y: 0.0,

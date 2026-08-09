@@ -1,2 +1,2 @@
-17:58:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-17:58:49: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_sender.py | main | 89] Connected!
+23:07:32: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+23:07:33: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_sender.py | main | 89] Connected!

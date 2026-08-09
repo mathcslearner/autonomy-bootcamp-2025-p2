@@ -77,6 +77,14 @@ class Command:  # pylint: disable=too-many-instance-attributes
             return False, None
 
         # Log average velocity for this trip so far
+        if (
+            telemetry_data.x_velocity is None
+            or telemetry_data.y_velocity is None
+            or telemetry_data.z_velocity is None
+        ):
+            self.local_logger.error("Telemetry sample missing velocity components", True)
+            return False, None
+
         self.vx_sum += telemetry_data.x_velocity
         self.vy_sum += telemetry_data.y_velocity
         self.vz_sum += telemetry_data.z_velocity

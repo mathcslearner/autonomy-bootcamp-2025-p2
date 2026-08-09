@@ -4,6 +4,7 @@ Telemtry worker that gathers GPS data.
 
 import os
 import pathlib
+import queue as py_queue
 
 from pymavlink import mavutil
 
@@ -67,7 +68,12 @@ def telemetry_worker(
             )
             continue
 
-        output_queue.queue.put(telemetry_data)
+        try:
+            output_queue.queue.put(telemetry_data, timeout=0.1)
+        except py_queue.Full:
+            local_logger.warning("Telemetry output queue full; dropping sample", True)
+            continue
+
         local_logger.info(f"Telemetry data enqueued: {telemetry_data}")
 
 

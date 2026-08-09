@@ -41,7 +41,7 @@ TELEMETRY_WORKER_COUNT = 1
 COMMAND_WORKER_COUNT = 1
 
 # Any other constants
-DRONE_TARGET = command.Position(43.4723, -80.5449, 50.0)
+DRONE_TARGET = command.Position(10.0, 20.0, 30.0)
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

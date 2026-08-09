@@ -101,6 +101,11 @@ class Telemetry:
         self.connection = connection
         self.logger = local_logger
 
+        # Retain the most recent message of each type across run() calls, so a
+        # cycle that only sees one type can still combine with the prior other.
+        self.latest_attitude = None
+        self.latest_local_position = None
+
     def run(
         self,
     ) -> "tuple[bool, TelemetryData | None]":
@@ -112,10 +117,7 @@ class Telemetry:
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
         start_time = time.time()
-        return_telemetry = TelemetryData()
-
-        local_position = None
-        attitude = None
+        received_new = False
 
         while time.time() - start_time <= 1:
             msg = self.connection.recv_match(type=["ATTITUDE", "LOCAL_POSITION_NED"], timeout=0.1)
@@ -123,32 +125,40 @@ class Telemetry:
             if not msg:
                 continue
             if msg.get_type() == "LOCAL_POSITION_NED":
-                local_position = msg
-            if msg.get_type() == "ATTITUDE":
-                attitude = msg
-            if attitude and local_position:
+                self.latest_local_position = msg
+                received_new = True
+            elif msg.get_type() == "ATTITUDE":
+                self.latest_attitude = msg
+                received_new = True
+
+            # Once both types have ever been seen, stop as soon as this cycle
+            # has refreshed at least one of them.
+            if received_new and self.latest_attitude and self.latest_local_position:
                 break
 
-        if attitude and local_position:
-            return_telemetry.time_since_boot = max(
-                local_position.time_boot_ms, attitude.time_boot_ms
-            )
-            return_telemetry.roll = attitude.roll
-            return_telemetry.pitch = attitude.pitch
-            return_telemetry.yaw = attitude.yaw
-            return_telemetry.roll_speed = attitude.rollspeed
-            return_telemetry.pitch_speed = attitude.pitchspeed
-            return_telemetry.yaw_speed = attitude.yawspeed
-            return_telemetry.x = local_position.x
-            return_telemetry.y = local_position.y
-            return_telemetry.z = local_position.z
-            return_telemetry.x_velocity = local_position.vx
-            return_telemetry.y_velocity = local_position.vy
-            return_telemetry.z_velocity = local_position.vz
-            return True, return_telemetry
+        # Only fails during startup, before both message types have arrived once.
+        if self.latest_attitude is None or self.latest_local_position is None:
+            self.logger.warning("Waiting for first ATTITUDE and LOCAL_POSITION_NED messages")
+            return False, None
 
-        self.logger.warning("Missing local_position_NED or attitude, restart")
-        return False, None
+        attitude = self.latest_attitude
+        local_position = self.latest_local_position
+
+        return_telemetry = TelemetryData()
+        return_telemetry.time_since_boot = max(local_position.time_boot_ms, attitude.time_boot_ms)
+        return_telemetry.roll = attitude.roll
+        return_telemetry.pitch = attitude.pitch
+        return_telemetry.yaw = attitude.yaw
+        return_telemetry.roll_speed = attitude.rollspeed
+        return_telemetry.pitch_speed = attitude.pitchspeed
+        return_telemetry.yaw_speed = attitude.yawspeed
+        return_telemetry.x = local_position.x
+        return_telemetry.y = local_position.y
+        return_telemetry.z = local_position.z
+        return_telemetry.x_velocity = local_position.vx
+        return_telemetry.y_velocity = local_position.vy
+        return_telemetry.z_velocity = local_position.vz
+        return True, return_telemetry
 
 
 # =================================================================================================

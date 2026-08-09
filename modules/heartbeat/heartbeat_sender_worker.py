@@ -58,6 +58,7 @@ def heartbeat_sender_worker(
     assert sender is not None
 
     # Main loop: do work.
+    next_send = time.monotonic()
     while not controller.is_exit_requested():
         controller.check_pause()
         result = sender.run()
@@ -65,7 +66,8 @@ def heartbeat_sender_worker(
         if not result:
             local_logger.warning("Heartbeat send failed this iteration", True)
 
-        time.sleep(1)
+        next_send += 1.0
+        time.sleep(max(0.0, next_send - time.monotonic()))
 
     local_logger.info("Heartbeat sender worker exiting", True)
 

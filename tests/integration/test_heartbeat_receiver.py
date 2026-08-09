@@ -5,6 +5,7 @@ Test the heartbeat reciever worker with a mocked drone.
 import multiprocessing as mp
 import subprocess
 import threading
+import queue as py_queue
 
 from pymavlink import mavutil
 
@@ -73,13 +74,17 @@ def read_queue(
         try:
             state = output_queue.queue.get(timeout=READ_TIMEOUT)
 
-            if state is None:
-                break
+        except py_queue.Empty:
+            continue
 
-            main_logger.info(f"Drone state: {state}", True)
         except (OSError, TypeError, AttributeError) as e:
             main_logger.error(f"Exception: {e}", True)
             continue
+
+        if state is None:
+            break
+
+        main_logger.info(f"Drone state: {state}", True)
 
 
 # =================================================================================================
