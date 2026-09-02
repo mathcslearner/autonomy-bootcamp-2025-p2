@@ -101,11 +101,6 @@ class Telemetry:
         self.connection = connection
         self.logger = local_logger
 
-        # Retain the most recent message of each type across run() calls, so a
-        # cycle that only sees one type can still combine with the prior other.
-        self.latest_attitude = None
-        self.latest_local_position = None
-
     def run(
         self,
     ) -> "tuple[bool, TelemetryData | None]":
@@ -117,7 +112,10 @@ class Telemetry:
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
         start_time = time.time()
-        received_new = False
+
+        # Both must be received fresh within this cycle; stale values are not reused.
+        attitude = None
+        local_position = None
 
         while time.time() - start_time <= 1:
             msg = self.connection.recv_match(type=["ATTITUDE", "LOCAL_POSITION_NED"], timeout=0.1)
@@ -125,24 +123,18 @@ class Telemetry:
             if not msg:
                 continue
             if msg.get_type() == "LOCAL_POSITION_NED":
-                self.latest_local_position = msg
-                received_new = True
+                local_position = msg
             elif msg.get_type() == "ATTITUDE":
-                self.latest_attitude = msg
-                received_new = True
+                attitude = msg
 
-            # Once both types have ever been seen, stop as soon as this cycle
-            # has refreshed at least one of them.
-            if received_new and self.latest_attitude and self.latest_local_position:
+            # Stop only once this cycle has a fresh reading of both message types.
+            if attitude is not None and local_position is not None:
                 break
 
-        # Only fails during startup, before both message types have arrived once.
-        if self.latest_attitude is None or self.latest_local_position is None:
-            self.logger.warning("Waiting for first ATTITUDE and LOCAL_POSITION_NED messages")
+        # A cycle that did not receive fresh data for both types could not get a
+        # complete reading; report failure so the worker can log it.
+        if attitude is None or local_position is None:
             return False, None
-
-        attitude = self.latest_attitude
-        local_position = self.latest_local_position
 
         return_telemetry = TelemetryData()
         return_telemetry.time_since_boot = max(local_position.time_boot_ms, attitude.time_boot_ms)

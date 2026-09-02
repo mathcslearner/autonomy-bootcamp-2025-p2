@@ -63,9 +63,7 @@ def telemetry_worker(
         controller.check_pause()
         result, telemetry_data = telemetry_instance.run()
         if not result:
-            local_logger.warning(
-                "Telemetry run() failed (timeout or bad message), retrying...", True
-            )
+            local_logger.warning("Could not get telemetry data", True)
             continue
 
         try:
@@ -73,8 +71,6 @@ def telemetry_worker(
         except py_queue.Full:
             local_logger.warning("Telemetry output queue full; dropping sample", True)
             continue
-
-        local_logger.info(f"Telemetry data enqueued: {telemetry_data}")
 
 
 # =================================================================================================

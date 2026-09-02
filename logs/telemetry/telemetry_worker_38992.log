@@ -1,0 +1,5 @@
+20:43:33: [INFO] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 48] Logger initialized
+20:43:39: [WARNING] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 66] Could not get telemetry data
+20:43:40: [WARNING] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 66] Could not get telemetry data
+20:43:41: [WARNING] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 66] Could not get telemetry data
+20:43:47: [WARNING] [/Users/mingzheli/Documents/vscode/uwarg/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 66] Could not get telemetry data
